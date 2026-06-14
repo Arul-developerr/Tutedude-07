@@ -28,9 +28,24 @@
 
 .navbar .nav-links li{
     list-style: none;
-    margin-left: 30px;
+    margin-left: 50px;
     cursor: pointer;
-    
+}
+
+.nav-links a{
+    display: flex;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+
+
+.side-menu{
+    display: none;
+}
+
+.div-btn{
+    display: flex;
 }
 
 .btn{
@@ -100,8 +115,22 @@
     height: auto;
     flex: 50%;
 }
+/* @media (width >= 1200px ) {
+    .nav-btn {
+        display: none;
+    }
+}
+@media (max-width: 1200px ) {
+    .nav-btn {
+        display: none;
+    }
+} */
 
-
+@media (width >= 768px){
+    .nav-btn {
+        display: none;
+    }
+}
 
 @media (max-width: 768px){
     .navbar .logo img{
@@ -125,6 +154,10 @@
     .div-left .btn-book{
         padding: 15px 30px;
         font-size: 16px;
+    }
+    
+    .nav-btn {
+        display: none;
     }
 }
 
@@ -154,5 +187,77 @@
         font-size: 16px;
     }
 
+    .btn{
+        margin-left:300px;
+    }
+
+    .nav-btn {
+        display: block;
+    }
 
 }
+
+/* For mobile view */
+
+.hamburger-menu{
+    display: none;
+}
+
+.nav-links li{
+    list-style: none;
+}
+
+@media (max-width:600px){
+
+    .hamburger-menu{
+        display: block;
+    }
+    .hamburger-btn{
+        background: none;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+    }
+    .hamburger-btn svg{
+        fill:  black;
+        margin-right: 10px;
+    }
+    .side-menu {
+        display: none; 
+        position: absolute;
+        top: 0;
+        right: 10px;
+        width: 40%;
+        height: 100vh;
+        background: linear-gradient(180deg,rgba(22, 85, 168, 1) 0%, rgba(29, 163, 253, 1) 27%, rgba(111, 186, 232, 1) 58%, rgba(69, 194, 252, 1) 100%);        z-index: 1000;
+        padding-top: 100px; 
+        border-radius: 10px;
+    }
+    .side-menu .side-nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        list-style: none;
+    }
+
+    .side-menu .side-nav-links li a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+    }
+    .side-nav-links li a:hover{
+        background: linear-gradient(90deg,rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+        -webkit-background-clip: text;
+        background-clip: text;   
+        color: transparent; 
+    }
+
+    .hamburger-btn:focus + .side-menu, .side-menu:hover{
+        display: block;
+    }
+}
+
+
+
